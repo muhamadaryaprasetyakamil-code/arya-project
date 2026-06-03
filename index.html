@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Muhamad Arya Prasetya Kamil</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 2px solid #3b82f6;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .profile-title {
+            font-size: 2.5rem;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .profile-subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge {
+            background-color: #1e3a8a;
+            color: #60a5fa;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Section Styles */
+        section {
+            margin: 3rem 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #3b82f6;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 10px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background-color: #1e293b;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: transform 0.2s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="profile-title">Muhamad Arya Prasetya Kamil</h1>
+            <p class="profile-subtitle">Siswa Teknik Jaringan Komputer dan Telekomunikasi</p>
+            <span class="badge">SMK Wikrama Bogor</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            <div class="card">
+                <p>Halo! Saya Arya, seorang siswa jurusan <strong>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</strong> di SMK Wikrama Bogor. Saya memiliki ketertarikan yang besar di bidang infrastruktur jaringan, administrasi server, serta perkembangan teknologi informasi terkini. Saya terbiasa belajar dengan disiplin dan siap mengembangkan keahlian di dunia industri IT.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Pendidikan</h2>
+            <div class="card">
+                <h3>SMK Wikrama Bogor</h3>
+                <p style="color: #94a3b8;">Jurusan Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</p>
+                <p style="margin-top: 0.5rem;">Fokus Pembelajaran: Konfigurasi Jaringan (Cisco/Mikrotik), Administrasi Sistem Jaringan, Layanan Jaringan, dan Troubleshooting Hardware/Software.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Keahlian Teknis</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <strong>Computer Networking</strong>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">LAN, WAN, Routing & Switching</p>
+                </div>
+                <div class="skill-item">
+                    <strong>MikroTik / Cisco</strong>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Konfigurasi Dasar & Security</p>
+                </div>
+                <div class="skill-item">
+                    <strong>Server Administration</strong>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Linux OS & Windows Server</p>
+                </div>
+                <div class="skill-item">
+                    <strong>Troubleshooting</strong>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Perbaikan Jaringan & Hardware</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Muhamad Arya Prasetya Kamil. Built with ❤️ from Wikrama.</p>
+    </footer>
+
+</body>
+</html>
