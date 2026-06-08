@@ -88,6 +88,13 @@
             margin-bottom: 1rem;
         }
 
+        /* Grid Dua Kolom */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
         /* Skills Grid */
         .skills-grid {
             display: grid;
@@ -145,6 +152,19 @@
             color: #94a3b8;
         }
 
+        /* Kontak Link Style */
+        .contact-link {
+            display: inline-block;
+            color: #60a5fa;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -175,14 +195,31 @@
             </div>
         </section>
 
-        <section id="education">
-            <h2>Pendidikan</h2>
-            <div class="card">
-                <h3>SMK Wikrama Bogor</h3>
-                <p style="color: #94a3b8;">Jurusan Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</p>
-                <p style="margin-top: 0.5rem;">Fokus Pembelajaran: Konfigurasi Jaringan (Cisco/Mikrotik), Administrasi Sistem Jaringan, Layanan Jaringan, dan Troubleshooting Hardware/Software.</p>
-            </div>
-        </section>
+        <div class="info-grid">
+            <section id="experience">
+                <h2>Pengalaman & Projek</h2>
+                <div class="card">
+                    <h3 style="color: #60a5fa;">IT Support & Maintenance</h3>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.5rem;">Projek Mandiri | 2024 - Sekarang</p>
+                    <p style="font-size: 0.95rem;">Melakukan instalasi sistem operasi Windows/Linux, troubleshooting perangkat keras, serta perawatan rutin komputer dan printer klien.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: #60a5fa;">Perancangan Jaringan Lokal</h3>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.5rem;">Lab TJKT Wikrama | 2025</p>
+                    <p style="font-size: 0.95rem;">Melakukan konfigurasi dasar router dan switch MikroTik/Cisco, pembuatan kabel UTP (crimping), serta simulasi pembagian bandwidth jaringan internet.</p>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Pendidikan</h2>
+                <div class="card">
+                    <h3 style="color: #60a5fa;">SMK Wikrama Bogor</h3>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Jurusan Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</p>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.5rem;">2024 - Sekarang</p>
+                    <p style="font-size: 0.95rem;">Fokus Pembelajaran: Konfigurasi Jaringan (Cisco/Mikrotik), Administrasi Sistem Jaringan, Layanan Jaringan, Keamanan Dasar, dan Pemecahan Masalah Hardware/Software.</p>
+                </div>
+            </section>
+        </div>
 
         <section id="skills">
             <h2>Keahlian Teknis</h2>
@@ -209,7 +246,6 @@
         <section id="certificates">
             <h2>Sertifikasi & Penghargaan</h2>
             <div class="cert-grid">
-                
                 <div class="cert-card">
                     <img src="sertifikat.jpg" alt="Sertifikat Arya 1" class="cert-img">
                     <div class="cert-info">
@@ -225,7 +261,15 @@
                         <p>Diterbitkan oleh: Cisco Networking Academy / BNSP</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
+        <section id="contact">
+            <h2>Kontak Hubung</h2>
+            <div class="card">
+                <p style="margin-bottom: 1rem;">Silakan hubungi saya melalui platform di bawah ini untuk berdiskusi lebih lanjut mengenai peluang kerja sama atau program PKL:</p>
+                <a href="mailto:muhamadaryaprasetyakamil@gmail.com" class="contact-link">📧 Email: muhamadarya@gmail.com</a>
+                <a href="https://github.com/muhamadaryaprasetyakamil-code" target="_blank" class="contact-link">💻 GitHub Profile</a>
             </div>
         </section>
     </div>
