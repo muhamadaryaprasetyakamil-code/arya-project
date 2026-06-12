@@ -29,7 +29,7 @@
             background-color: var(--bg-dark);
             color: var(--text-main);
             min-height: 100vh;
-            padding-bottom: 80px;
+            padding-bottom: 100px;
             background-image: 
                 radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 40%),
                 radial-gradient(circle at 90% 80%, rgba(0, 210, 255, 0.08) 0%, transparent 40%);
@@ -55,7 +55,7 @@
             border: 1px solid var(--border-glass);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 210, 255, 0.1);
             display: flex;
-            gap: 20px;
+            gap: 10px;
             z-index: 1000;
         }
 
@@ -246,6 +246,70 @@
             box-shadow: 0 5px 15px rgba(0, 210, 255, 0.1);
         }
 
+        /* KARTU PROYEK UNGGULAN */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--blue-neon);
+            box-shadow: 0 15px 35px rgba(0, 102, 255, 0.1), 0 0 15px rgba(0, 210, 255, 0.05);
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            color: var(--blue-neon);
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+        }
+
+        .project-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-tag {
+            background: rgba(0, 210, 255, 0.1);
+            color: var(--blue-neon);
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
         /* KARTU SERTIFIKAT RESPONSIVE GRID */
         .portfolio-grid {
             display: grid;
@@ -323,9 +387,9 @@
         @media (max-width: 640px) {
             .hero-section { padding: 40px 15px; }
             .hero-section h1 { font-size: 2rem; }
-            .portfolio-grid { grid-template-columns: 1fr; }
-            .navbar { width: 90%; justify-content: center; gap: 5px; padding: 8px 10px; }
-            .navbar a { padding: 6px 12px; font-size: 0.8rem; }
+            .portfolio-grid, .project-grid { grid-template-columns: 1fr; }
+            .navbar { width: 92%; justify-content: center; gap: 2px; padding: 6px 8px; }
+            .navbar a { padding: 6px 10px; font-size: 0.75rem; }
         }
     </style>
 </head>
@@ -334,6 +398,7 @@
     <nav class="navbar">
         <a href="#profil" class="active">Profil</a>
         <a href="#keahlian">Keahlian</a>
+        <a href="#proyek">Proyek</a>
         <a href="#sertifikat">Sertifikasi</a>
     </nav>
 
@@ -347,7 +412,7 @@
                 Seorang profesional IT pemula yang berfokus pada Keamanan Siber (Cybersecurity) dan Infrastruktur Jaringan. Memiliki sertifikasi resmi dari Cisco Networking Academy yang memvalidasi kemampuan teknis dalam mengamankan sistem dan mengelola jaringan komputer secara andal.
             </p>
             <div class="btn-container">
-                <a href="https://wa.me/6285770585471?text=Halo%20Muhamad%20Arya,%20saya%20tertarik%20dengan%20portofolio%20Anda." target="_blank" class="btn btn-primary">Hubungi WhatsApp</a>
+                <a href="https://wa.me/6285770585471?text=Halo%20Muhamad%20Arya,%20saya%20tertarik%20dengan%20proyek%20dan%20portofolio%20Anda." target="_blank" class="btn btn-primary">Hubungi WhatsApp</a>
                 <a href="mailto:emailmu@gmail.com" class="btn btn-secondary">Kirim Email</a>
             </div>
         </section>
@@ -362,6 +427,59 @@
                     <span class="skill-badge">Troubleshooting</span>
                     <span class="skill-badge">HTML / CSS (Web Design)</span>
                 </div>
+            </div>
+        </section>
+
+        <section id="proyek">
+            <h2 class="section-heading" style="color: var(--blue-neon);">Proyek Unggulan</h2>
+            
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div>
+                        <div class="project-icon">🌐</div>
+                        <div class="project-title">Secure Corporate Network Architecture</div>
+                        <div class="project-desc">
+                            Merancang topologi jaringan perusahaan skala menengah yang aman menggunakan Cisco Packet Tracer. Menerapkan segmentasi jaringan VLAN, keamanan port (Port Security), Inter-VLAN Routing, serta konfigurasi Access Control List (ACL) untuk membatasi hak akses data sensitif.
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Cisco</span>
+                        <span class="project-tag">VLAN</span>
+                        <span class="project-tag">ACL</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <div class="project-icon">🛡️</div>
+                        <div class="project-title">Vulnerability Assessment & Hardening</div>
+                        <div class="project-desc">
+                            Melakukan simulasi pengujian celah keamanan sistem jaringan lokal (Penetration Testing) berskala laboratorium. Melakukan scanning port terbuka menggunakan Nmap, analisis risiko keamanan, dan melakukan pengerasan sistem (hardening) untuk mencegah serangan siber.
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Nmap</span>
+                        <span class="project-tag">Security Audit</span>
+                        <span class="project-tag">Hardening</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <div class="project-icon">⚡</div>
+                        <div class="project-title">Intrusion Detection System Deployment</div>
+                        <div class="project-desc">
+                            Konfigurasi dan pemantauan sistem pendeteksi ancaman jaringan otomatis (IDS) untuk menganalisis lalu lintas data berbahaya. Berfokus pada identifikasi aktivitas mencurigakan seperti Brute Force dan DoS Attack demi menjaga integritas data jaringan.
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">IDS / IPS</span>
+                        <span class="project-tag">Network Security</span>
+                        <span class="project-tag">Monitoring</span>
+                    </div>
+                </div>
+
             </div>
         </section>
 
