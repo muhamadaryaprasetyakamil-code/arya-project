@@ -255,4 +255,315 @@
             background: var(--bg-card);
             border: 1px solid var(--border-glass);
             border-radius: 16px;
-            padding
+            padding: 25px;
+            text-align: center;
+        }
+
+        .goal-card i {
+            font-size: 2.2rem;
+            color: var(--blue-neon);
+            margin-bottom: 15px;
+        }
+
+        .goal-card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .goal-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* CONTACT SECTION */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--blue-neon);
+            margin-bottom: 10px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            word-break: break-all;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: var(--blue-neon);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid var(--border-glass);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 640px) {
+            .hero-section h1 { font-size: 2rem; }
+            .project-container, .cert-gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <section class="hero-section" data-aos="fade-down">
+            <img src="arya.jpg" alt="Muhamad Arya Prasetya Kamil" class="profile-img">
+            <h1>Muhamad Arya Prasetya Kamil</h1>
+            <div class="typing-container">
+                <span id="typing"></span>
+            </div>
+            <p class="bio">
+                Seorang profesional IT pemula yang berfokus pada Keamanan Siber (Cybersecurity) dan Infrastruktur Jaringan. Memiliki sertifikasi resmi dari Cisco Networking Academy yang memvalidasi kemampuan teknis dalam mengamankan sistem dan mengelola jaringan komputer secara andal.
+            </p>
+        </section>
+
+        <section id="skills" data-aos="fade-up">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Networking</h3>
+                    <p>TCP/IP, Subnetting, Routing, Switching</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🖥</div>
+                    <h3>Linux</h3>
+                    <p>Debian, Apache2, DNS Server, SSH</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">☁</div>
+                    <h3>AWS Cloud</h3>
+                    <p>EC2, VPC, Security Group, Hosting</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">📡</div>
+                    <h3>MikroTik</h3>
+                    <p>Hotspot, DHCP, Firewall, Routing</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🔀</div>
+                    <h3>Cisco</h3>
+                    <p>VLAN, Routing, Switching, Packet Tracer</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🔌</div>
+                    <h3>Network Cabling</h3>
+                    <p>Crimping RJ45, Straight & Cross Cable</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🔒</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Dasar Keamanan Jaringan, Firewall, Access Control, Security Monitoring</p>
+                </div>        
+            </div>
+        </section>
+            
+        <section id="projects" data-aos="zoom-in">
+            <h2>My Projects</h2>
+            <div class="project-container">
+                
+                <a href="https://drive.google.com/drive/folders/169DcVqQDvPFl45GGBwGl3FPEk2UM6Gfu" target="_blank" class="project-link">       
+                    <div class="project-card">
+                        <img src="images/cisco.png" alt="Cisco Networking" onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500'">
+                        <h3>Cisco Enterprise Network Design</h3>
+                        <p>Dokumentasi perancangan topologi jaringan aman menggunakan Cisco Packet Tracer.</p>
+                    </div>
+                </a>
+
+                <a href="https://drive.google.com/drive/folders/1j0yTKNVNxEnhZLOLx_H-g-X6dwztej2M" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <img src="images/cybersecurity.png" alt="Cybersecurity" onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500'">
+                        <h3>Cybersecurity Defense Labs</h3>
+                        <p>Kumpulan berkas audit keamanan, pengujian penetrasi sistem, dan hardening jaringan.</p>
+                    </div>
+                </a>
+                
+            </div>        
+        </section>
+
+        <section id="certificates" data-aos="fade-up">
+            <h2>Certificates</h2>
+            <div class="cert-gallery">
+
+                <div class="cert-card">
+                    <img src="setifikat arya.jpg" alt="Cybersecurity Essentials">
+                    <div class="cert-info">
+                        <h3>Cybersecurity Essentials</h3>
+                        <a href="setifikat arya.jpg" target="_blank">Lihat Sertifikat</a>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="sertifikat.jpg" alt="Sertifikat Kompetensi BNSP">
+                    <div class="cert-info">
+                        <h3>Sertifikat Kompetensi BNSP</h3>
+                        <a href="sertifikat.jpg" target="_blank">Lihat Sertifikat</a>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="sertifikat arya.jpg" alt="Cisco Networking">
+                    <div class="cert-info">
+                        <h3>Cisco Networking Fundamentals</h3>
+                        <a href="sertifikat arya.jpg" target="_blank">Lihat Sertifikat</a>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="setifikat arya2.jpg" alt="Sertifikasi Kompetensi TIK">
+                    <div class="cert-info">
+                        <h3>Sertifikasi Kompetensi TIK</h3>
+                        <a href="setifikat arya2.jpg" target="_blank">Lihat Sertifikat</a>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="sertifikat arya3.jpg" alt="Professional Certification">
+                    <div class="cert-info">
+                        <h3>Professional Certification</h3>
+                        <a href="sertifikat arya3.jpg" target="_blank">Lihat Sertifikat</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="goals" data-aos="fade-up">
+            <h2>Tujuan PKL</h2>
+            <div class="goals-container">
+                <div class="goal-card">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h3>Meningkatkan Kompetensi</h3>
+                    <p>Mengembangkan kemampuan dalam konfigurasi jaringan, administrasi server Linux, serta penerapan keamanan jaringan.</p>
+                </div>
+
+                <div class="goal-card">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h3>Mengenal Dunia Kerja</h3>
+                    <p>Memahami budaya kerja profesional, disiplin, komunikasi, dan tanggung jawab di lingkungan industri.</p>
+                </div>
+
+                <div class="goal-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Persiapan Karier</h3>
+                    <p>Membangun pengalaman dan portofolio sebagai bekal untuk memasuki dunia kerja maupun pendidikan lanjutan.</p>
+                </div>
+            </div>
+        </section>
+            
+        <section id="contact" data-aos="fade-left">
+            <h2>Contact</h2>
+            <div class="contact-container">
+                <div class="contact-card">
+                    <i class="fa-brands fa-github"></i>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/muhamadaryaprasetyakamil-code" target="_blank">
+                        github.com/muhamadaryaprasetyakamil-code
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <a href="mailto:muhamadaryaprasetyakamil@gmail.com">
+                        muhamadaryaprasetyakamil@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/6285770585471?text=Halo%20Muhamad%20Arya,%20saya%20tertarik%20dengan%20portofolio%20Anda." target="_blank">
+                        +62 857-7058-5471
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Muhamad Arya Prasetya Kamil Portfolio</p>
+        <p>TJKT Student • Future Network & Security Engineer</p>
+    </footer>
+        
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const el = document.getElementById("typing");
+            if (!el) return;
+
+            const texts = [
+                "TJKT Student",
+                "Network Engineer Enthusiast",
+                "Cybersecurity Learner",
+                "Linux Systems Practitioner"
+            ];
+
+            let i = 0;
+            let j = 0;
+            let isDeleting = false;
+
+            function typeEffect() {
+                let current = texts[i];
+                if (isDeleting) { j--; } else { j++; }
+
+                el.textContent = current.substring(0, j);
+
+                if (!isDeleting && j === current.length) {
+                    isDeleting = true;
+                    setTimeout(typeEffect, 1500);
+                    return;
+                }
+
+                if (isDeleting && j === 0) {
+                    isDeleting = false;
+                    i = (i + 1) % texts.length;
+                }
+
+                setTimeout(typeEffect, isDeleting ? 50 : 100);
+            }
+            typeEffect();
+        });
+    </script>
+</body>
+</html>
