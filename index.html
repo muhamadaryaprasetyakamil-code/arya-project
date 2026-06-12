@@ -5,133 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Muhamad Arya Prasetya Kamil</title>
     <style>
-        /* Gaya Dasar */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0b132b;
-            color: #ffffff;
+        /* CSS RESET & VARIABEL WARNA */
+        * {
             margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f172a; /* Warna latar belakang gelap modern */
+            color: #f8fafc;
+            line-height: 1.6;
+            padding: 40px 20px;
         }
 
         .container {
-            width: 100%;
-            max-width: 800px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
-        h1 {
+        /* BANNER PROFIL UTAMA */
+        .profile-card {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 40px 20px;
             text-align: center;
-            color: #4ea8de;
-            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 50px;
         }
 
-        /* Gaya Card Sertifikat */
-        .card {
-            background-color: #1c2541;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            margin-bottom: 25px;
-            overflow: hidden;
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8; /* Aksen warna biru muda */
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+            margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        .profile-img:hover {
+            transform: scale(1.05) rotate(3deg);
         }
 
-        .image-container {
-            width: 100%;
-            background-color: #ffffff;
-            padding: 10px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: contain;
-            display: block;
-        }
-
-        .card-content {
-            padding: 20px;
-        }
-
-        .card-content h3 {
-            margin: 0 0 8px 0;
-            font-size: 1.4rem;
+        .profile-card h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
             color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
 
-        .card-content p {
-            margin: 0;
-            font-size: 1rem;
-            color: #9bf6ff;
-            opacity: 0.8;
+        .profile-card p {
+            font-size: 1.2rem;
+            color: #38bdf8;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-    </style>
-</head>
-<body>
 
-    <div class="container">
-        <h1>Sertifikat Kompetensi</h1>
+        /* BAGIAN JUDUL SERTIFIKAT */
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            color: #f1f5f9;
+        }
 
-        <div class="card">
-            <div class="image-container">
-                <img src="sertifikat.jpg" alt="Sertifikat Kompetensi 1">
-            </div>
-            <div class="card-content">
-                <h3>Sertifikat Kompetensi 1</h3>
-                <p>Diterbitkan oleh: Cisco Networking Academy / BNSP</p>
-            </div>
-        </div>
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #38bdf8;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
 
-        <div class="card">
-            <div class="image-container">
-                <img src="sertifikat arya.jpg" alt="Sertifikat Kompetensi 2">
-            </div>
-            <div class="card-content">
-                <h3>Sertifikat Kompetensi 2</h3>
-                <p>Diterbitkan oleh: Cisco Networking Academy / BNSP</p>
-            </div>
-        </div>
+        /* GRID TATA LETAK SERTIFIKAT */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
 
-        <div class="card">
-            <div class="image-container">
-                <img src="setifikat arya.jpg" alt="Sertifikat Kompetensi 3">
-            </div>
-            <div class="card-content">
-                <h3>Sertifikat Kompetensi 3</h3>
-                <p>Diterbitkan oleh: Cisco Networking Academy / BNSP</p>
-            </div>
-        </div>
+        /* GAYA CARD SERTIFIKAT */
+        .cert-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
 
-        <div class="card">
-            <div class="image-container">
-                <img src="setifikat arya2.jpg" alt="Sertifikat Kompetensi 4">
-            </div>
-            <div class="card-content">
-                <h3>Sertifikat Kompetensi 4</h3>
-                <p>Diterbitkan oleh: Cisco Networking Academy / BNSP</p>
-            </div>
-        </div>
+        .cert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
+            border-color: #475569;
+        }
 
-        <div class="card">
-            <div class="image-container">
-                <img src="sertifikat arya3.jpg" alt="Sertifikat Kompetensi 5">
-            </div>
-            <div class="card-content">
-                <h3>Sertifikat Kompetensi 5</h3>
-                <p>Diterbitkan oleh: Cisco Networking Academy / BNSP</p>
-            </div>
-        </div>
-
-    </div>
-
-</body>
-</html>
+        .image-wrapper {
+            width: 100%;
+            height: 220px;
+            background-color: #ffffff;
+            padding:
